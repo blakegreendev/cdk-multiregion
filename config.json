@@ -1,0 +1,29 @@
+{
+  "cdk_pipeline": {
+    "pipeline_name": "cdkPipeline",
+    "repository_name": "cdkmultiregion",
+    "branch": "main",
+    "build_environment": {
+      "account": "987092829714",
+      "region": "us-west-2"
+    }
+  },
+  "environments": {
+    "dev": {
+      "name": "dev",
+      "cidr_block": "10.1.0.0/16",
+      "env": {
+        "account": "987092829714",
+        "region": "us-east-2"
+      }
+    },
+    "production": {
+      "name": "prod",
+      "cidr_block": "10.0.0.0/16",
+      "env": {
+        "account": "987092829714",
+        "region": "us-east-1"
+      }
+    }
+  }
+}
